@@ -1,0 +1,1012 @@
+:root {
+  --primary: crimson;
+  --headerbg: #596d7d;
+  --navbarbg: #ede9e9;
+  --font: #383838;
+  --btn: #ecc9c9;
+  --btnh: crimson;
+  --reasoncard: #fbc3b0;
+  --card: #b9e2f5;
+  --findcard: #ff580f;
+}
+* {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(-20px); /* Dimulai dari 20px di bawah posisi awal */
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0); /* Transisi ke posisi awal */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  color: var(--font);
+}
+
+/******************** Home ********************/
+/********** Header **********/
+.header {
+  background-color: var(--headerbg);
+}
+.header p {
+  color: white;
+  font-size: 1.5rem;
+  justify-content: center;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+/********** Header End **********/
+
+/********** Navbar **********/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: var(--navbarbg);
+  border: dotted var(--font) 3px;
+}
+.navbar .navbar-brand img {
+  width: 10rem;
+}
+.navbar .navbar-nav a {
+  color: var(--font);
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  font-weight: 700;
+}
+.navbar .navbar-extra a {
+  color: var(--font);
+  font-size: 1.6rem;
+  margin: 0 0.5rem;
+  font-weight: 700;
+}
+.navbar .navbar-nav a:hover,
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+/********** Navbar End **********/
+
+/********** Footer **********/
+.footer {
+  background-color: var(--headerbg);
+}
+.footer .row {
+  padding: 2rem;
+  color: white;
+}
+.footer .row a {
+  text-decoration: none;
+  color: white;
+}
+.footer .row .btn {
+  width: 100%;
+  background-color: var(--btn);
+  margin-top: 1rem;
+}
+.footer .row .btn:hover {
+  background-color: var(--primary);
+}
+.credit {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.credit p {
+  padding: 1rem;
+}
+.credit p a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+/********** Footer End **********/
+
+/********** Carousel **********/
+.car {
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+/********** Carousel End **********/
+
+/********** Sentence **********/
+.sentence {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.sentence h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+}
+/********** Sentence End **********/
+
+/********** Reason **********/
+.reason .dot {
+  text-align: center;
+}
+.reason .dot img {
+  width: 2rem;
+  margin-top: 1rem;
+}
+.reason h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.reason p {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 0 4rem;
+}
+.reason .reason-sentence {
+  text-align: center;
+  margin: 2rem;
+}
+.reason .reason-sentence .rainbow {
+  width: 3rem;
+  margin-top: -1rem;
+}
+.reason .reason-sentence .rainbow-sentence {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.reason .reason-box .row {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 3rem;
+}
+.reason .reason-box .row .card {
+  border-radius: 5rem;
+  background-color: var(--reasoncard);
+  border: none;
+}
+.reason .reason-box .row .card .card-img {
+  text-align: center;
+  padding: 1rem 0;
+}
+.reason .reason-box .row .card img {
+  width: 50%;
+}
+.reason .reason-box .row .card .card-title {
+  font-weight: 700;
+}
+.reason .reason-box .row .card .card-text {
+  padding: 0 1rem;
+}
+/********** Reason End **********/
+
+/********** Latest **********/
+.latest {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  padding: 1rem;
+}
+.latest::after {
+  flex: 1;
+  content: "";
+  padding: 1px;
+  background-color: var(--font);
+  margin: 0.5rem;
+  margin-top: -0.5rem;
+}
+.latest p {
+  font-family: "Josefin Sans", sans-serif;
+}
+.latest img {
+  width: 8%;
+  margin-top: -1.5rem;
+}
+.see {
+  margin: 0 0.5rem;
+}
+.see a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--font);
+}
+.see a p:hover {
+  color: crimson;
+}
+.latest-product .row {
+  padding: 1rem;
+}
+.latest-product .row .card {
+  background-color: var(--card);
+  border: none;
+}
+.latest-product .row .card .card-img img {
+  padding: 1rem;
+}
+.latest-product .row .card .card-body .card-title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.latest-product .row .card .card-body .star i,
+.carousel .carousel-inner-latest .carousel-item-latest .card-latest .star i {
+  /*color: #eedd1f;*/
+  font-size: 1.1rem;
+}
+.latest-product .row .card .card-body .card-text,
+.carousel .carousel-inner-latest .carousel-item-latest .card-latest .card-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.latest-product .row .card .card-body .btn {
+  background-color: var(--btn);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.latest-product .row .card .card-body .btn:hover,
+.carousel .carousel-inner-latest .carousel-item-latest .card-latest .btn:hover {
+  background-color: var(--btnh);
+}
+.desktop-view {
+  display: block;
+}
+
+.mobile-view {
+  display: none;
+}
+
+/* Mobile View */
+.carousel .carousel-inner-latest .carousel-item-latest {
+  padding: 2rem;
+}
+.carousel .carousel-inner-latest .carousel-item-latest .card-latest {
+  background-color: var(--btn);
+}
+.carousel .carousel-inner-latest .carousel-item-latest .card-img img {
+  padding: 1rem;
+}
+.carousel .carousel-inner-latest .carousel-item-latest .card-latest .btn {
+  background-color: var(--card);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.carousel .icon-previous,
+.carousel .icon-next {
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: 1rem;
+}
+/********** Latest End **********/
+
+/********** Find **********/
+.statement-other,
+.statement-other-about {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.statement-other img,
+.statement-other-about img {
+  width: 7%;
+  margin-top: -25px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.statement-other::before,
+.statement-other-about,
+.statement-other::after,
+.statement-other-about::after {
+  flex: 1;
+  content: "";
+  padding: 0.1rem;
+  background-color: black;
+  margin-top: -1.8rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.find-style .row .box {
+  background-color: var(--findcard);
+  border-radius: 3rem;
+}
+.find-style .row .box .shopee-logo {
+  width: 15%;
+  padding: 1rem 0;
+}
+.find-style .row .box .logo img {
+  filter: drop-shadow(-10px 18px 13px #ffffff);
+  width: 60%;
+  margin-top: -5rem;
+}
+.find-style .row .box .title {
+  text-align: center;
+  margin: 1rem;
+}
+.find-style .row .box i {
+  color: #eedd1f;
+}
+.find-style .row .box .rate {
+  text-align: center;
+}
+.find-style .row .box .vote .follow a {
+  background-color: var(--btnh);
+}
+/********** Find End **********/
+
+/******************** Home End ********************/
+
+/******************** Prouct********************/
+.product .row {
+  padding: 1rem;
+}
+.product .row .card {
+  background-color: var(--card);
+  border: none;
+}
+.product .row .card .card-img img {
+  padding: 0.5rem 0.5rem;
+}
+.product .row .card .button a {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.product .row .card .button .btn {
+  background-color: var(--btn);
+}
+.product .row .card .button .btn:hover {
+  background-color: var(--primary);
+}
+
+/******************** Product End ********************/
+
+/******************** Order ********************/
+.pesanan {
+  padding: 0 2rem;
+}
+.pesanan .row {
+  padding: 0 1rem;
+  margin: 1rem;
+  background-color: var(--card);
+  border-radius: 2rem;
+}
+.pesanan .row:hover {
+  background-color: #add5e7;
+}
+.pesanan .row .pesanan-card {
+  padding: 1rem;
+}
+.pesanan .row .caption-card {
+  width: 100%;
+  padding-top: 3rem;
+}
+.pesanan .row .pesanan-card .img-card .image {
+  width: 80%;
+}
+.pesanan .row .caption-card h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.pesanan .row .caption-card p {
+  font-size: 1.3rem;
+}
+.pesanan .row .caption-card .sub-total {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.pesanan .row .caption-card .lihat-detail p {
+  font-size: 0.9rem;
+}
+.pesanan .row .caption-card a {
+  color: var(--font);
+  text-decoration: none;
+}
+.pesanan .row .caption-card a:hover {
+  color: var(--primary);
+}
+
+/******************** Order End ********************/
+
+/******************** About ********************/
+.about {
+  background-color: var(--btn);
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+  margin-top: -2rem;
+}
+.wrapper {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+}
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel .dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel .dragging img {
+  pointer-events: none;
+}
+.carousel img {
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child {
+  margin-left: 0px;
+}
+.find-maps {
+  text-align: center;
+}
+
+.mobile-view-about {
+  display: none;
+}
+
+/*Mobile*/
+.carousel .carousel-inner-about .carousel-item-about {
+  text-align: center;
+}
+.carousel .carousel-inner-about .carousel-item-about img {
+  width: 90%;
+  height: 30rem;
+  overflow-y: hidden;
+}
+/******************** About ********************/
+
+/******************** Contact ********************/
+.contact-box {
+  width: 30rem;
+  height: 20rem;
+  text-align: center;
+  padding: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fbc3b0;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-bottom: 4rem;
+  margin-top: -1.5rem;
+}
+.contact-box .email-box {
+  position: relative;
+}
+.contact-box .email-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.contact-box .email-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.conatact-box .email-box input:focus ~ label,
+.contact-box .email-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: crimson;
+  font-size: 12px;
+}
+.contact-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #cf8c23;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+.contact-box a:hover {
+  background: crimson;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px crimson, 0 0 25px crimson, 0 0 50px crimson, 0 0 100px crimson;
+}
+.contact-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent);
+  animation: btn-anim1 1s linear infinite;
+}
+.contact-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+.contact-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+/******************** End Contact ********************/
+
+/******************** Detail ********************/
+.detail-produk .row {
+  padding: 2rem;
+}
+.detail-produk .row .detail-produk-img-card .detail-img {
+  width: 100%;
+}
+.detail-produk .row .detail-info {
+  padding: 2rem;
+}
+
+.detail-produk .row .detail-info h1 {
+  font-weight: 700;
+}
+.detail-produk .row .detail-info p {
+  margin: 1.5rem 0;
+  line-height: 1rem;
+  font-size: 1.2rem;
+}
+.detail-produk .row .detail-info .linked a {
+  background-color: var(--card);
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+.detail-produk .row .detail-info .linked .btn-cart:hover {
+  background-color: var(--btn);
+  font-weight: 700;
+}
+.detail-produk .row .detail-info .linked .btn-back:hover {
+  background-color: var(--primary);
+  font-weight: 700;
+  color: white;
+}
+
+.detail-produk .toko {
+  margin-top: -2rem;
+}
+.detail-produk .toko .row img {
+  width: 90%;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.detail-produk .toko .row .detail-toko {
+  line-height: 0;
+}
+.detail-produk .toko .row h3 {
+  font-size: 2rem;
+}
+.detail-produk .toko .row .button-toko {
+  margin-top: 2rem;
+}
+.detail-produk .toko .row .btn {
+  background-color: var(--btn);
+  text-align: center;
+}
+.detail-produk .toko .row .btn:hover {
+  background-color: var(--btnh);
+  color: white;
+}
+
+.desk-com {
+  padding: 0 2rem;
+}
+.desk-com .tab {
+  padding: 2rem 0;
+}
+.desk-com .tab-komentar {
+  max-height: 20rem;
+  overflow: scroll;
+}
+.desk-com .tab-komentar .row-review {
+  padding-left: 2rem;
+  margin-top: -2rem;
+}
+
+.desk-com .tab-komentar .row-review .review-img {
+  width: 50%;
+}
+.desk-com .tab-komentar .row-review .review-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.desk-com .tab input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+.desk-com .tab .btn-komentar {
+  background-color: var(--btn);
+}
+.desk-com .tab .btn-komentar:hover {
+  background-color: var(--btnh);
+  color: white;
+  transition: 0.2s linear;
+}
+/******************** End Detail ********************/
+
+/******************** MEDIA SCREEN ********************/
+/*Laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/*Laptop*/
+@media (max-width: 768px) {
+  html {
+    font-size: 82%;
+  }
+
+  .carousel-about img {
+    width: calc(100% / 2);
+  }
+
+  /*Header*/
+  .header p {
+    font-size: 1rem;
+  }
+
+  /*Navbar*/
+  .navbar .navbar-brand img {
+    width: 6rem;
+  }
+  .navbar .navbar-nav a {
+    font-size: 1rem;
+  }
+  .navbar .navbar-extra {
+    font-size: 1.3rem;
+    text-align: end;
+  }
+
+  /*Footer*/
+  .footer .row .box-form,
+  .footer .row .help-text {
+    display: none;
+  }
+  .footer .row {
+    flex-wrap: wrap;
+  }
+  .footer .row .box {
+    padding: 0 0.5rem;
+  }
+  .footer .row .box h1 {
+    font-size: 1.4rem;
+  }
+  .footer .row .box p {
+    font-size: 0.8rem;
+  }
+  /*.footer .row .box {
+    margin: 0.5rem 1rem;
+    line-height: 0.8rem;
+  }
+  .footer .row .box h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  } */
+
+  /********** Home **********/
+  /*Carousel*/
+  .car {
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+  /*Setence*/
+  .sentence {
+    margin: 2rem 0;
+  }
+  .sentence h1 {
+    font-size: 1.5rem;
+  }
+  /*Reason*/
+  .reason {
+    margin-bottom: 2rem;
+  }
+  .reason h1 {
+    font-size: 1.5rem;
+    padding: 0 0.8rem;
+  }
+  .reason p {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+  }
+  .reason .reason-box .row {
+    padding: 0 0.5rem;
+  }
+  .reason .reason-box .row .card .card-img {
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+  .reason .reason-box .row .card img {
+    width: 30%;
+  }
+
+  /*Latest*/
+  .carousel .carousel-inner .carousel-item .card .card-img .product-img {
+    width: 90%;
+  }
+  .carousel .carousel-inner .carousel-item .card {
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+  }
+  .carousel .carousel-inner .carousel-item .card .card-body .card-title {
+    font-size: 1.3rem;
+  }
+  .carousel .carousel-inner .carousel-item .card .card-body .star i {
+    font-size: 1rem;
+  }
+  .carousel .carousel-inner .carousel-item .card .card-body .card-text {
+    font-size: 1.1rem;
+  }
+  .carousel .carousel-inner .carousel-item .card .card-body a {
+    font-size: 1.2rem;
+  }
+  .desktop-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+
+  /*Find Statement*/
+  .statement-other {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+  .statement-other img {
+    width: 12%;
+    margin-top: -25px;
+  }
+  .statement-other::before,
+  .statement-other::after {
+    flex: 1;
+    content: "";
+    padding: 1px;
+    background-color: black;
+    margin-top: -1.7rem;
+  }
+  .find-style {
+    margin-top: -2rem;
+  }
+  .find-style .row {
+    margin: 0.5rem;
+  }
+  .find-style .row .box .shopee-logo {
+    width: 15%;
+    padding: 1rem 0;
+  }
+  .find-style .row .box .logo img {
+    filter: drop-shadow(-10px 18px 13px #ffffff);
+    width: 60%;
+    margin-top: -5rem;
+  }
+  .find-style .row .box .title {
+    text-align: center;
+    margin: 1rem;
+  }
+  .find-style .row .box i {
+    color: #eedd1f;
+  }
+  .find-style .row .box .rate {
+    text-align: center;
+  }
+  .find-style .row .box .vote .follow a {
+    background-color: var(--btnh);
+  }
+  .find style .row .box .vote h5 {
+    font-size: 0.2rem;
+  }
+  .find-style .row .box .vote .follow a {
+    font-size: 0.8rem;
+  }
+  .find-style .row .vote {
+    padding: 0 1rem;
+  }
+  .find-maps .row .vote .followers,
+  .find-maps .row .vote .reviews {
+    padding: 0;
+  }
+  /********** End Home **********/
+
+  /********** Product **********/
+  .product {
+    margin-top: -2.5rem;
+  }
+  .product .row .card .card-body h5 {
+    font-size: 1.2rem;
+  }
+  .product .row .card .card-body .star i {
+    font-size: 0.8rem;
+  }
+  .product .row .card .card-body p {
+    margin-top: 0.5rem;
+  }
+  .product .row .card .card-body .button .btn {
+    margin-top: 0.5rem;
+  }
+  /********** Product End **********/
+
+  /********** Order End **********/
+  .pesanan {
+    padding: 0;
+    margin-top: -1.5rem;
+  }
+  .pesanan .row {
+    padding: 0 0.5rem;
+    margin: 1rem;
+  }
+  .pesanan .row .pesanan-card {
+    padding: 0;
+    text-align: center;
+  }
+
+  .pesanan .row .caption-card {
+    padding: 0;
+  }
+  .pesanan .row .caption-card h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .pesanan .row .caption-card p {
+    font-size: 1rem;
+    line-height: 0.6rem;
+  }
+  .pesanan .row .caption-card .sub-total {
+    font-size: 0.9rem;
+  }
+  .pesanan .row .caption-card .lihat-detail p {
+    font-size: 0.8rem;
+  }
+  /********** Order End **********/
+
+  /********** About **********/
+  .statement-other-about {
+    margin-top: 2rem;
+  }
+  .about {
+    margin-bottom: 1rem;
+  }
+  .about img {
+    width: 70%;
+  }
+  .wrapper .carousel-about {
+    margin-top: -3rem;
+  }
+  .wrapper .carousel-about img {
+    max-height: 10rem;
+    overflow: hidden;
+  }
+  .mobile-view-about {
+    display: block;
+  }
+  .wrapper {
+    display: none;
+  }
+  /********** About End **********/
+
+  /********** Contact **********/
+
+  .contact-box {
+    width: 90%;
+    height: 100%;
+    padding: 2rem 4rem;
+  }
+  /********** Contact End **********/
+
+  /********** Detail Produk **********/
+
+  .detail-produk .row {
+    padding: 0.5rem;
+  }
+  .detail-produk .row .detail-produk-img-card {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .detail-produk .row .detail-produk-img-card .detail-img {
+    width: 90%;
+  }
+  .detail-produk .row .detail-info .info-sh {
+    display: flex;
+  }
+  .detail-produk .row .detail-info .info-sh p {
+    margin-right: 2rem;
+  }
+  .detail-produk .row .toko {
+    padding-top: 2rem;
+  }
+  .detail-produk .row .toko .row img {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .detail-produk .row .toko .row h3 {
+    font-size: 1.5rem;
+  }
+  .detail-produk .row .toko .row p {
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+  }
+  .detail-produk .toko .row .button-toko {
+    margin-top: 1rem;
+  }
+  .desk-com {
+    padding: 0 1rem;
+  }
+  .desk-com .tab {
+    padding: 2rem 0;
+  }
+  .desk-com .tab-komentar {
+    height: 15rem;
+    overflow-y: scroll;
+  }
+  .desk-com .tab-komentar .row-review {
+    padding-left: 1rem;
+    margin-top: 0.1rem;
+    width: 95%;
+  }
+  .desk-com .tab-komentar .row-review .review-img {
+    width: 100%;
+  }
+  .desk-com .tab-komentar .row-review .review-name {
+    font-size: 1.2rem;
+  }
+  .desk-com .tab-komentar .row-review .review-des {
+    font-size: 1rem;
+  }
+  /********** Detail Produk End **********/
+}
+
+/*Phone*/
+@media (max-width: 355px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/******************** END MEDIA SCREEN ********************/
